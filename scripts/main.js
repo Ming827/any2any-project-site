@@ -72,11 +72,11 @@
             src: "vedio_data/sim2sim/sonic2/sonic2oli/Data%202026-03-03%2016-20-35_001.bvh_Skeleton0_npy_raw_2.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2oli/Data%202026-03-03%2016-20-35_002.bvh_Skeleton0_npy_raw_2.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2oli/Data%202026-03-03%2016-20-35_003.bvh_Skeleton0_npy_raw_2.mp4"
           },
           {
@@ -186,11 +186,11 @@
             src: "vedio_data/sim2sim/sonic2/sonic2luna/Data%202026-03-03%2016-20-35_001.bvh_Skeleton0_npy_filtered_1.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2luna/Data%202026-03-03%2016-20-35_002.bvh_Skeleton0_npy_filtered_0.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2luna/Data%202026-03-03%2016-20-35_003.bvh_Skeleton0_npy_filtered_0.mp4"
           },
           {
@@ -236,11 +236,11 @@
             src: "vedio_data/sim2sim/sonic2/sonic2h1/A3_M001.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2h1/A2_M002.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/sonic2/sonic2h1/A3_M003.mp4"
           },
           {
@@ -284,11 +284,11 @@
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2g1/A1_1.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2g1/A1_2.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2g1/A1_3.mp4"
           },
           {
@@ -326,11 +326,11 @@
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2h1/A1_1.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2h1/A1_2.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2h1/A1_3.mp4"
           },
           {
@@ -360,11 +360,11 @@
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2luna/clips/01_social.mp4"
           },
           {
-            label: "Slow",
+            label: "Slow Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2luna/clips/02_slow.mp4"
           },
           {
-            label: "Medium",
+            label: "Medium Walk",
             src: "vedio_data/sim2sim/oliwbt2/oliwbt2luna/clips/03_medium.mp4"
           },
           {
@@ -416,19 +416,19 @@
             src: "vedio_data/sim2real-sonic3/sonic_G12oli-3-fast%20walking.mp4"
           },
           {
-            label: "Backward",
+            label: "Walk Backwards",
             src: "vedio_data/sim2real-sonic3/sonic_G12oli-4-backward-walking.mp4"
           },
           {
-            label: "Turning",
+            label: "Turn Around",
             src: "vedio_data/sim2real-sonic3/sonic_G12oli-5-turing.mp4"
           },
           {
-            label: "Turn Walk",
+            label: "Walk and Turn",
             src: "vedio_data/sim2real-sonic3/sonic_G12oli-6-turn%20walk.mp4"
           },
           {
-            label: "Running",
+            label: "Run",
             src: "vedio_data/sim2real-sonic3/sonic_G12oli-7-running.mp4"
           },
           {
