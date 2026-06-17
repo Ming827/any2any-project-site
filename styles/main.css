@@ -274,7 +274,7 @@ button {
 
 
 .cover__active-caption {
-  margin: 18px auto 0;
+  margin: clamp(128px, 18vh, 230px) auto 0;
   color: #fff;
   font-size: clamp(21px, 2.4vw, 30px);
   font-weight: 820;
@@ -287,7 +287,7 @@ button {
   width: fit-content;
   align-items: center;
   gap: 14px;
-  margin: clamp(128px, 18vh, 230px) auto 0;
+  margin: 14px auto 0;
   padding: 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;

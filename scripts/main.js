@@ -454,6 +454,10 @@
           {
             label: "Dance 5",
             src: "vedio_data/sim2real-sonic2-cropped/dance5.mp4"
+          },
+          {
+            label: "Dance 6",
+            src: "vedio_data/sim2real-sonic2-cropped/dance6.mp4"
           }
         ]
       }
@@ -504,6 +508,7 @@
       });
 
       source.src = motion.src;
+      video.style.objectFit = motion.fit || "";
       if (title) title.textContent = `${group.name} · ${motion.label}`;
       if (meta) meta.textContent = `Motion ${index + 1} / ${group.motions.length}`;
       renderMotionList();
