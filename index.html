@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Any2Any</title>
+  <meta name="description" content="Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Any2Any">
+  <meta property="og:description" content="Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="styles/main.css?v=cover-lead-layout-20260617">
+</head>
+<body>
+  <section class="cover" id="top">
+    <div class="cover__media">
+      <div class="cover__video-carousel" data-cover-track>
+        <figure class="cover__slide cover__slide--dance" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic2-cropped/sonic2oil_dance_1_1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Dance</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-1-social.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Social</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-2-slow%20walking.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Slow Walk</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-3-fast%20walking.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Fast Walk</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-4-backward-walking.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Backward</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-5-turing.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Turning</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-6-turn%20walk.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Turn Walk</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-7-running.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Running</figcaption>
+        </figure>
+        <figure class="cover__slide" data-cover-slide>
+          <video playsinline autoplay muted loop preload="metadata">
+            <source src="vedio_data/sim2real-sonic3/sonic_G12oli-8-locomanipulation.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sonic -> Oli · Loco-Manip</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="cover__shade"></div>
+
+    <div class="cover__content">
+      <h1>Any2Any</h1>
+      <p class="cover__subtitle">Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking</p>
+      <p class="cover__authors">
+        Ming Yang, Tao Yu<sup>†</sup>, Feng Li, Hua Chen
+        <span>LimX Dynamics</span>
+        <span class="cover__author-note">† Project Lead</span>
+      </p>
+      <div class="cover__links">
+        <a href="https://arxiv.org/abs/2605.23733">arXiv</a>
+        <a href="assets/paper/any2any.pdf">Paper</a>
+      </div>
+      <div class="cover__carousel-controls" aria-label="Cover video selector">
+        <button class="cover__arrow" type="button" aria-label="Previous cover video" data-cover-prev>&lsaquo;</button>
+        <div class="cover__dots">
+          <button class="is-active" type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+          <button type="button" data-cover-dot></button>
+        </div>
+        <button class="cover__arrow" type="button" aria-label="Next cover video" data-cover-next>&rsaquo;</button>
+      </div>
+      <p class="cover__active-caption" data-cover-caption>Sonic -> Oli · Dance</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section section--intro">
+      <div class="container">
+        <div class="intro-grid">
+          <div>
+            <h2>Abstract</h2>
+            <p>
+              Whole-body tracking models are becoming reusable motor priors for humanoid robots, but training
+              a high-quality tracker from scratch is expensive and embodiment-specific. <strong>Any2Any</strong>
+              studies whether pretrained WBT specialists can transfer to new humanoids with minimal adaptation.
+              The framework first performs <strong>kinematic alignment</strong> to reconcile observation, reference,
+              and action spaces across embodiments, then applies lightweight <strong>dynamics adaptation</strong>
+              through LoRA modules inserted into dynamics-sensitive parts of the frozen policy.
+            </p>
+            <p>
+              Across Sonic and Oli-WBT source backbones, Any2Any evaluates six cross-embodiment transfer
+              instances over LimX Oli, LimX Luna, Unitree G1, and Unitree H1, achieving strong tracking
+              performance with a small fraction of the original data and compute.
+            </p>
+          </div>
+          <div class="stats">
+            <div><strong>~1%</strong><span>Compute and data for Sonic2Oli relative to Sonic pretraining</span></div>
+            <div><strong>6</strong><span>Cross-embodiment transfer instances</span></div>
+            <div><strong>4</strong><span>Humanoid platforms</span></div>
+            <div><strong>5.26%</strong><span>Trainable parameters with LoRA</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Overview</h2>
+        <p class="lead">
+          A pretrained whole-body tracker can be reused on a new humanoid through embodiment adaptation,
+          reducing the target-side training cost from large-scale pretraining to compact post-training.
+        </p>
+        <figure class="figure figure--wide figure--bare">
+          <img src="assets/figures/figure1-overview-soft.png" alt="Any2Any cross-embodiment transfer overview.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Method</h2>
+        <p class="lead">
+          Any2Any decomposes cross-embodiment transfer into kinematic alignment, which maps observation
+          and action semantics across robot morphologies, and dynamics adaptation, which fine-tunes lightweight
+          LoRA modules for target-specific dynamics.
+        </p>
+        <figure class="figure figure--wide figure--bare">
+          <img src="assets/figures/figure2-architecture.png?v=method-crop-20260617" alt="Any2Any architecture.">
+        </figure>
+        <div class="two-col">
+          <article>
+            <h3>Kinematic Alignment</h3>
+            <p>Aligns observation layout, joint semantics, hip-axis geometry, and closed-chain coupling before policy reuse.</p>
+          </article>
+          <article>
+            <h3>Dynamics Adaptation</h3>
+            <p>Freezes the pretrained WBT backbone and trains low-rank LoRA factors on target-specific dynamics pathways.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="sim2sim-player">
+      <div class="container slim">
+        <h2 class="center">Sonic2 Sim2Sim Rollouts</h2>
+        <p class="lead center">
+          Sonic transfer motions on LimX Oli, LimX Luna, and Unitree H1 in simulation, including Oli dance clips.
+        </p>
+        <div class="motion-player" data-motion-player data-motion-set="sim2sim">
+          <div class="motion-player__tabs" role="tablist" aria-label="Sonic2 Sim2Sim Rollouts">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-motion-group="sonic2oli">Sonic -> Oli</button>
+            <button type="button" role="tab" aria-selected="false" data-motion-group="sonic2luna">Sonic -> Luna</button>
+            <button type="button" role="tab" aria-selected="false" data-motion-group="sonic2h1">Sonic -> H1</button>
+          </div>
+          <figure class="motion-player__stage">
+            <video muted playsinline controls preload="metadata" data-motion-video>
+              <source src="vedio_data/sim2sim/sonic2/sonic2oli/Data%202026-03-03%2016-20-35_001.bvh_Skeleton0_npy_raw_2.mp4" type="video/mp4" data-motion-source>
+            </video>
+            <figcaption>
+              <strong data-motion-title>Sonic -> Oli · Social</strong>
+              <span data-motion-meta>Motion 1 / 26</span>
+            </figcaption>
+          </figure>
+          <div class="motion-player__chooser" aria-label="Motion selector" data-motion-list></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="oliwbt2-sim2sim-player">
+      <div class="container slim">
+        <h2 class="center">Oli-WBT2 Sim2Sim Rollouts</h2>
+        <p class="lead center">
+          Oli-WBT2 transfer motions on Unitree G1, Unitree H1, and LimX Luna in simulation.
+        </p>
+        <div class="motion-player" data-motion-player data-motion-set="oliwbt2">
+          <div class="motion-player__tabs" role="tablist" aria-label="Oli-WBT2 Sim2Sim Rollouts">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-motion-group="oliwbt2g1">Oli-WBT2 -> G1</button>
+            <button type="button" role="tab" aria-selected="false" data-motion-group="oliwbt2h1">Oli-WBT2 -> H1</button>
+            <button type="button" role="tab" aria-selected="false" data-motion-group="oliwbt2luna">Oli-WBT2 -> Luna</button>
+          </div>
+          <figure class="motion-player__stage">
+            <video muted playsinline controls preload="metadata" data-motion-video>
+              <source src="vedio_data/sim2sim/oliwbt2/oliwbt2g1/A1_1.mp4" type="video/mp4" data-motion-source>
+            </video>
+            <figcaption>
+              <strong data-motion-title>Oli-WBT2 -> G1 · Social</strong>
+              <span data-motion-meta>Motion 1 / 9</span>
+            </figcaption>
+          </figure>
+          <div class="motion-player__chooser" aria-label="Motion selector" data-motion-list></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="sim2real-player">
+      <div class="container slim">
+        <h2 class="center">Sonic2 Sim2Real Rollouts</h2>
+        <p class="lead center">
+          Sonic transfer motions on LimX Oli in real-world deployment.
+        </p>
+        <div class="motion-player" data-motion-player data-motion-set="sim2real">
+          <div class="motion-player__tabs" role="tablist" aria-label="Sonic2 Sim2Real Rollouts">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-motion-group="sonic2real-oli">Sonic -> Oli</button>
+          </div>
+          <figure class="motion-player__stage">
+            <video muted playsinline controls preload="metadata" data-motion-video>
+              <source src="vedio_data/sim2real-sonic3/sonic_G12oli-1-social.mp4" type="video/mp4" data-motion-source>
+            </video>
+            <figcaption>
+              <strong data-motion-title>Sonic -> Oli · Social</strong>
+              <span data-motion-meta>Motion 1 / 13</span>
+            </figcaption>
+          </figure>
+          <div class="motion-player__chooser" aria-label="Motion selector" data-motion-list></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="efficiency">
+      <div class="container">
+        <h2 class="center">Data and Compute Efficiency</h2>
+        <p class="lead center">
+          Any2Any maintains higher success rates than training from scratch under reduced data and GPU-hour budgets.
+        </p>
+        <figure class="figure figure--wide figure--bare">
+          <img src="assets/figures/figure5-efficiency.png" alt="Any2Any data and compute efficiency.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container slim">
+        <h2>Citation</h2>
+        <div class="bibtex">
+          <button type="button" data-copy-target="#bibtex-block">
+            <span>Copy BibTeX</span>
+          </button>
+          <pre id="bibtex-block"><code>@article{yang2026any2any,
+  title   = {Any2Any: Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking},
+  author  = {Yang, Ming and Yu, Tao and Li, Feng and Chen, Hua},
+  journal = {arXiv preprint arXiv:2605.23733},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2605.23733}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Any2Any - LimX Dynamics</p>
+      <p class="footer__links">
+        <a href="https://arxiv.org/abs/2605.23733">arXiv</a>
+        <a href="assets/paper/any2any.pdf">Paper</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js?v=cover-lead-layout-20260617" defer></script>
+</body>
+</html>
