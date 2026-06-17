@@ -149,6 +149,11 @@ button {
   filter: saturate(0.98) contrast(1.03);
 }
 
+.cover__slide--dance video {
+  object-fit: cover;
+  transform: scale(0.94);
+}
+
 .cover__slide figcaption {
   display: none;
 }
