@@ -413,14 +413,13 @@ h3 {
 .stats strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--orange);
   font-size: 34px;
   line-height: 1;
-}
-
-.stats div:nth-child(2) strong,
-.stats div:nth-child(3) strong {
-  color: var(--blue);
+  background: linear-gradient(100deg, #29a9d6 0%, #32cfe8 24%, #2fc1a0 52%, #6fce6c 74%, #ef8534 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .stats span {
